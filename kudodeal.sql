@@ -107,7 +107,7 @@ CREATE TABLE `deal` (
 
 LOCK TABLES `deal` WRITE;
 /*!40000 ALTER TABLE `deal` DISABLE KEYS */;
-INSERT INTO `deal` VALUES (2,'2018-01-22 08:55:11','2018-01-29 08:55:11',1,1000,'10% off all lunch specials');
+INSERT INTO `deal` VALUES (2,'2018-01-22 08:55:11','2018-01-29 08:55:11',3,1000,'10% off all lunch specials');
 /*!40000 ALTER TABLE `deal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,7 +122,7 @@ CREATE TABLE `deal_types` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type_name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -131,7 +131,7 @@ CREATE TABLE `deal_types` (
 
 LOCK TABLES `deal_types` WRITE;
 /*!40000 ALTER TABLE `deal_types` DISABLE KEYS */;
-INSERT INTO `deal_types` VALUES (1,'General'),(2,'BOGO'),(3,'% discount'),(4,'$ discount');
+INSERT INTO `deal_types` VALUES (1,'General'),(2,'BOGO'),(3,'10% Off'),(4,'20% Off'),(5,'30% Off'),(6,'40% Off'),(7,'50% Off'),(8,'15% Off'),(9,'25% Off'),(10,'35% Off'),(11,'5% Off'),(12,'15% Off'),(13,'40% Off');
 /*!40000 ALTER TABLE `deal_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -303,4 +303,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-22  9:31:57
+-- Dump completed on 2018-01-22 21:25:06
