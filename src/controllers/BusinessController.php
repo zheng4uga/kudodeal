@@ -42,7 +42,7 @@ class BusinessController {
                 . "cos((`latitude` * pi()/180)) * cos((($lon - `longitude` ) * "
                 . "pi()/180)))) * 180/pi()) * 60 * 1.1515) as distance, s.state_abbr "
                 . "FROM `$business_table` as b LEFT JOIN `$state_table` as s "
-                . "ON b.state=s.id  HAVING distance <= $distance";
+                . "ON b.state=s.id  HAVING distance <= $distance ORDER BY distance ASC";
         $query =$db->query($queryStatement);
         $resp = array();
         foreach($query as $row){
