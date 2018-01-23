@@ -23,6 +23,8 @@ class DealController {
     }
     
     public function createDeal($request, $response, $args){
+        $bid = $args['bid'];
+        $request -> getBody();
         // create deal base on business id
     }
 }
